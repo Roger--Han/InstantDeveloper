@@ -16,7 +16,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="3cO-bG-FpQ">
@@ -46,9 +46,22 @@
                                         </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Need help with your coding problems? We'll find you the right developer who can help you in 15 minutes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cu5-cr-kz9">
+                                        <constraints>
+                                            <constraint firstAttribute="height" id="19s-ie-s6M"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="19s-ie-s6M"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="19s-ie-s6M"/>
+                                            </mask>
+                                        </variation>
                                     </label>
                                 </subviews>
                             </stackView>
@@ -78,7 +91,9 @@
                             <constraint firstAttribute="trailing" secondItem="3cO-bG-FpQ" secondAttribute="trailing" id="Gir-Yo-hOY"/>
                             <constraint firstItem="3cO-bG-FpQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RAy-Oj-Dse"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oud-cR-hCh" secondAttribute="bottom" constant="20" id="Zjb-Yd-9oX"/>
-                            <constraint firstItem="3cO-bG-FpQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="70" id="gqm-mr-bxw"/>
+                            <constraint firstItem="3cO-bG-FpQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="70" id="gqm-mr-bxw">
+                                <variation key="heightClass=compact" constant="0.0"/>
+                            </constraint>
                         </constraints>
                     </view>
                 </viewController>
